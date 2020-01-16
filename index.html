@@ -3,20 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>You Are Here</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22381566-5"></script>
+    <title>Where You Rank</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117244570-4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-22381566-5');
+      gtag('config', 'UA-117244570-4');
     </script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <style>
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
 form {
   width: 100%;
@@ -48,12 +51,16 @@ form {
   border: 5px dashed black;
   transform: translateX(-50%);
 }
+.label{
+  position: absolute;
+  bottom: 5px;left: 5px;
+}
     </style>
   </head>
 
   <body>
     <form id="form">
-      <input id="website" name="website" type="text" placeholder="Enter your website&hellip;" autocomplete="off" required>
+      <input id="website" name="website" type="text" placeholder="Enter your website URL &hellip;" autocomplete="off" required>
       <div>
         <label><input type="radio" name="type" value="origin" checked="true">Origin</label>
         <label><input type="radio" name="type" value="url">URL</label>
@@ -65,7 +72,7 @@ form {
         <i class="marker"></i>
         <img class="chart" src="fcp-mobile.png">
         <div>
-          <span style="position: absolute;bottom: 5px;left: 5px;">
+          <span class="label">
             Mobile FCP
           </span>
         </div>
@@ -74,7 +81,7 @@ form {
         <i class="marker"></i>
         <img class="chart" src="fid-mobile.png">
         <div>
-          <span style="position: absolute;bottom: 5px;left: 5px;">
+          <span class="label">
             Mobile FID
           </span>
         </div>
@@ -86,7 +93,7 @@ form {
         <i class="marker"></i>
         <img class="chart" src="fcp-desktop.png">
         <div>
-          <span style="position: absolute;bottom: 5px;left: 5px;">
+          <span class="label">
             Desktop FCP
           </span>
         </div>
@@ -95,7 +102,7 @@ form {
         <i class="marker"></i>
         <img class="chart" src="fid-desktop.png">
         <div>
-          <span style="position: absolute;bottom: 5px;left: 5px;">
+         <span class="label">
             Desktop FID
           </span>
         </div>
